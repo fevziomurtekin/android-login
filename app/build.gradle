@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.tekin.loginp"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.google.guava:guava:19.0'
+    compile 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile 'org.apache.httpcomponents:httpclient:4.5.2'
+    compile 'com.ning:async-http-client:1.9.36'
+    compile 'com.android.support:design:23.1.0'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+
+
+
+}
